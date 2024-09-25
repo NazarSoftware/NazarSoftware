@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма заявки</title>
+    <link rel="manifest" href="manifest.json" />
+    <style>
+      body {
+        background-color: #003d7a; /* Темно-синий фон страницы */
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 60%;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #004080; /* Чуть светлее синий фон контейнера */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        color: #ffffff; /* Белый цвет заголовка */
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #ffffff; /* Белый цвет для меток */
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 6px;
+        border-radius: 4px;
+        border: 1px solid #ffffff; /* Белая рамка для полей ввода */
+        box-sizing: border-box;
+        background-color: #004080; /* Чуть светлее синий фон для полей ввода */
+        color: #ffffff; /* Белый текст в полях ввода */
+      }
+
+      #fileDropArea {
+        border: 2px dashed #ffffff; /* Белая рамка для области загрузки */
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #003d7a; /* Темно-синий фон для области загрузки */
+      }
+
+      #fileAttributesContainer {
+        margin-top: 20px;
+      }
+
+      .file-attributes {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .file-attributes h3 {
+        margin: 0;
+        font-size: 14px;
+        color: #ffffff; /* Белый цвет для названий файлов */
+      }
+
+      .file-attributes label {
+        margin: 0;
+        color: #ffffff; /* Белый цвет для меток */
+      }
+
+      .file-attributes input,
+      .file-attributes select {
+        width: auto;
+        margin-left: 5px;
+        font-size: 12px;
+        padding: 4px;
+        background-color: #004080; /* Чуть светлее синий фон для полей ввода */
+        color: #ffffff; /* Белый текст в полях ввода */
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: #0056b3; /* Светло-синий фон кнопки */
+        color: #ffffff; /* Белый текст на кнопке */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #004080; /* Темно-синий фон кнопки при наведении */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Форма заявки</h1>
+      <form id="applicationForm">
+        <div class="form-group">
+          <label for="client">Заказчик или № заявки:</label>
+          <input type="text" id="client" name="client" required />
+        </div>
+        <div class="form-group">
+          <label for="name">ФИО:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Почта:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div id="fileDropArea">
+          Перетащите файлы сюда или нажмите для выбора
+          <input type="file" id="fileInput" multiple style="display: none" />
+        </div>
+        <div id="fileAttributesContainer"></div>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

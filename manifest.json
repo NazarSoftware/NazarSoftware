@@ -1,0 +1,21 @@
+{
+  "name": "Форма заявки",
+  "short_name": "Заявка",
+  "description": "Форма для отправки заявки.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#003d7a",
+  "theme_color": "#004080",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
