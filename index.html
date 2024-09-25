@@ -125,15 +125,15 @@
         </div>
         <div class="form-group">
           <label for="name">ФИО:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" />
         </div>
         <div class="form-group">
           <label for="phone">Телефон:</label>
-          <input type="tel" id="phone" name="phone" required />
+          <input type="tel" id="phone" name="phone" />
         </div>
         <div class="form-group">
           <label for="email">Почта:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" />
         </div>
         <div id="fileDropArea">
           Перетащите файлы сюда или нажмите для выбора
@@ -143,7 +143,10 @@
         <button type="submit">Отправить</button>
       </form>
       <div class="note">
-        <p>После нажатия кнопки "Отправить" будет сформирована таблица Excel, которую нужно сохранить и отправить вместе с Вашими DXF файлами.</p>
+        <p>
+          После нажатия кнопки "Отправить" будет сформирована таблица Excel,
+          которую нужно сохранить и отправить вместе с Вашими DXF файлами.
+        </p>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
