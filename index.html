@@ -103,6 +103,16 @@
       button:hover {
         background-color: #004080; /* Темно-синий фон кнопки при наведении */
       }
+
+      .note {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #003d7a; /* Темно-синий фон для примечания */
+        color: #ffffff; /* Белый текст */
+        border-radius: 8px;
+        text-align: center;
+        font-size: 14px;
+      }
     </style>
   </head>
   <body>
@@ -132,6 +142,9 @@
         <div id="fileAttributesContainer"></div>
         <button type="submit">Отправить</button>
       </form>
+      <div class="note">
+        <p>После нажатия кнопки "Отправить" будет сформирована таблица Excel, которую нужно сохранить и отправить вместе с Вашими DXF файлами.</p>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="app.js"></script>
