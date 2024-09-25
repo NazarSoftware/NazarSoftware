@@ -59,9 +59,10 @@ function createFileAttributes(file) {
   materialLabel.textContent = "Материал:";
   const materialSelect = document.createElement("select");
   materialSelect.innerHTML = `
-        <option value="aluminium">Алюминий</option>
         <option value="steel">Сталь</option>
+        <option value="aluminium">Алюминий</option>
         <option value="stainless_steel">Нержавеющая сталь</option>
+        
     `;
   fileAttributesDiv.appendChild(materialLabel);
   fileAttributesDiv.appendChild(materialSelect);
