@@ -28,6 +28,11 @@
         color: #ffffff; /* Белый цвет заголовка */
       }
 
+      p {
+        text-align: center;
+        color: #ffffff; /* Белый текст для описания */
+      }
+
       .form-group {
         margin-bottom: 15px;
       }
@@ -118,6 +123,12 @@
   <body>
     <div class="container">
       <h1>Онлайн заявка</h1>
+      <p style="text-align: center; color: #ffffff">
+        Пожалуйста, заполните форму ниже и прикрепите необходимые файлы. После
+        нажатия кнопки "отправить" будет сформирована таблица EXCEL которую
+        нужно отправить вместе с Вашими DXF файлами. EXCEL таблицу можно
+        сохранить в формате CSV и использовать в программе CNCkad Metalix
+      </p>
       <form id="applicationForm">
         <div class="form-group">
           <label for="client">Заказчик или № заявки:</label>
